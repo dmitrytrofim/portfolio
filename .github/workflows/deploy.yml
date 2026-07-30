@@ -1,8 +1,8 @@
-name: Deploy Vue Site
+name: Deploy Static Site
 
 on:
   push:
-    branches: ["main"] # Укажите имя вашей главной ветки (main или master)
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -24,25 +24,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Папка, куда Vue собирает готовый сайт (обычно dist)
+          path: '.'  # Весь проект (или './src' если у вас папка src)
 
       - name: Deploy to GitHub Pages
         id: deployment
