@@ -1,0 +1,54 @@
+@use './tools/index' as *;
+
+::-webkit-scrollbar-button {
+  width: 6px;
+  height: 0;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--b-white);
+  box-shadow: 0 0 3px var(--b-white) inset;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: var(--b-black);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+::-webkit-resizer {
+  width: 7px;
+  height: 0;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+// html {
+//  font-size: 16px !important;
+// }
+
+body.page {
+  font-family: $font-inter;
+  font-weight: 400;
+  font-size: $fsize-16;
+  line-height: 1.2;
+  color: var(--);
+  background-color: var(--);
+  &.j-lock {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}

@@ -1,0 +1,15 @@
+// @use './different/fonts';
+@use './different/modern-normalize';
+@use './different/custom-reset';
+// @use '../../node_modules/@splidejs/splide/dist/css/splide.min';
+// @use '../../node_modules/locomotive-scroll/dist/locomotive-scroll';
+// @use '../../node_modules/photoswipe/dist/photoswipe';
+// @use '../../node_modules/simplelightbox/src/simple-lightbox';
+@use './global';
+@use './elements';
+@use './s1-header';
+// @use './s2-aside';
+@use './main-1';
+@use './s3-footer';
+@use './s4-animation';
+// @use './s5-wpchange';

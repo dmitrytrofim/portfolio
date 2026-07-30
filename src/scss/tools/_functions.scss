@@ -1,0 +1,11 @@
+@use 'sass:math';
+
+@function srem($a) {
+  @return calc($a/16) + rem;
+}
+@function lhcalc($a, $b) {
+  @return calc(math.ceil(calc($a / $b * 100)) / 100);
+}
+@function asprat($a, $b) {
+  @return calc(math.ceil(calc($a / $b * 10000)) / 10000);
+}

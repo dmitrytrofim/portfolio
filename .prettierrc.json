@@ -1,0 +1,21 @@
+{
+  "printWidth": 100,
+  "tabWidth": 2,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "plugins": ["prettier-plugin-ejs"],
+  "overrides": [
+    {
+      "files": ["*.test.js", "*.spec.ts"],
+      "options": {
+        "printWidth": 120
+      }
+    },
+    {
+      "files": ["*.md", "*.html", "*.scss", "*.js", "*.ejs"],
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
+}

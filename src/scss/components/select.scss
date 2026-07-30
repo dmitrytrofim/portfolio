@@ -1,0 +1,59 @@
+.select {
+  & {
+    position: relative;
+    &.j-current {
+      z-index: 200;
+    }
+  }
+  &__btn {
+    position: relative;
+    height: 48px;
+    width: 100%;
+    text-align: left;
+    border-radius: 16px;
+    border: 1px solid #000;
+    padding-left: 20px;
+    transition: border-radius 0s linear 0.2s;
+    z-index: 5;
+    &.j-choice {
+      color: blue;
+    }
+    &::after {
+      position: absolute;
+      content: '^';
+      top: calc(50% - 7px);
+      right: 18px;
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s linear 0s;
+    }
+    &.j-show {
+      transition: border-radius 0s linear 0s;
+      border-radius: 16px 16px 0 0;
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: height 0.2s linear 0s;
+  }
+  &__list {
+    border-radius: 0 0 16px 16px;
+    border: 1px solid #000;
+    border-top: none;
+    padding: 5px 0;
+  }
+  &__item {
+    padding: 5px 0 5px 20px;
+    user-select: none;
+    cursor: pointer;
+  }
+}

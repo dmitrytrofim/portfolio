@@ -1,0 +1,19 @@
+{
+  "path-intellisense.mappings": {
+    "/img": "${workspaceRoot}/public/img",
+    "/fonts": "${workspaceRoot}/public/fonts",
+    "/files": "${workspaceRoot}/public/files"
+  },
+  "files.exclude": {
+    ".vscode": false,
+    "**/node_modules": false,
+    "docker-compose.yml": true,
+    "theme-wp": true,
+    "package-lock.json": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[ejs]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

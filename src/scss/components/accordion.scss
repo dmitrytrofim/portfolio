@@ -1,0 +1,35 @@
+.accordion {
+  & {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn {
+    position: relative;
+    cursor: pointer;
+    &::after {
+      position: absolute;
+      content: '^';
+      transition: transform 0.2s linear 0s;
+    }
+    &.j-active {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__dropdown {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s linear 0s;
+    &.j-show {
+      height: auto;
+    }
+  }
+  &__inner {
+  }
+}
