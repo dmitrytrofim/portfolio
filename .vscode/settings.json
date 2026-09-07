@@ -11,9 +11,15 @@
     "theme-wp": true,
     "package-lock.json": true
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
   "[ejs]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "always",
+    "source.fixAll.eslint": "always"
+  },
+  "oxc.path.oxfmt": "./node_modules/oxfmt/bin/oxfmt",
+  "editor.tabSize": 2
 }
